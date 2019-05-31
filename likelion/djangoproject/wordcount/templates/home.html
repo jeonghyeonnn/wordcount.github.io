@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>워드카운터</title>
+		<style>
+		@font-face { font-family: 'S-CoreDream-1Thin'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff'); font-weight: normal; font-style: normal; }
+			.box1{
+				font-size: 50px;
+				font-family: "Malgun Gothic";
+				font-weight:50px;
+				color: #ffffff;
+				text-align:center;
+				height:230px;
+				width:1110px;
+				margin-top:30px;
+				background-color:black;
+				}
+
+			.box1>h1{
+				font-size:50px;
+				margin-top:70px;
+				margin-left:370px;
+				position: absolute;
+				font-family: 'S-CoreDream-1Thin'; 
+			}
+
+			.box2{
+				background-color: #E6E6E6;
+				height: 430px;
+				width:1110px;
+				margin-top: 30px;
+				margin-right: 50px;
+
+			}
+
+			.box2>form{
+				margin-top: 50px;
+				margin-left: 100px;
+				position: absolute;
+			}
+		</style>
+		   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class = "container">
+			<div class = "box1">
+				<h1>내용을 입력하세요.</h1>
+			</div>
+			<div class= "box2">
+				<form action = "{% url 'result' %}">
+				<input type="text" style= "height:300px ; width:900px;" name="fulltext"><br><br>
+				<center>
+				<input type="submit" value="count!" class="btn btn-outline-dark">
+				</center>
+				</form>
+				<a href="{% url 'about' %}">about</a>
+			</div>			
+		</div>
+	</body>
+</html>
+
+
